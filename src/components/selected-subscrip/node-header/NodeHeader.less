@@ -1,0 +1,20 @@
+.node-header {
+  height: 18px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  .node-collapse-arrow {
+    font-size: 20px;
+    display: inline;
+    color: #272772;
+
+    &.collapsed {
+      transform: rotate(180deg);
+    }
+  }
+
+  .node-type {
+    text-transform: capitalize;
+  }
+}

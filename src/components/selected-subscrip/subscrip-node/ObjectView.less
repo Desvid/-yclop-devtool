@@ -1,0 +1,17 @@
+.node {
+  height: inherit;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 1px dashed rgba(255, 255, 255, .3);
+
+    &.is-expanded {
+      position: absolute;
+      top: 18px;
+      left: 0;
+    }
+  }
+}

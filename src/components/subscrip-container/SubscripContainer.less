@@ -1,0 +1,35 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 60px);
+
+  .resizeble-container {
+    position: relative;
+    padding-top: 6px;
+    &-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      box-sizing: border-box;
+      border: 0;
+      padding: 0;
+      height: 100%;
+      cursor: col-resize;
+      width: 2px;
+      box-shadow: -3px 2px 22px -5px #fff;
+    }
+
+    &-list {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+  }
+
+  .selected-content {
+    background-color: #fff;
+    padding: 10px;
+    overflow: auto;
+  }
+}

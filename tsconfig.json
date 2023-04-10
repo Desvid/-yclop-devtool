@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "outDir": "./cyclop-devtool/dist/",
+      "module": "esnext",
+      "target": "es5",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "sourceMap": true,
+      "esModuleInterop": true,
+      "allowJs": true,
+      "jsx": "react-jsx"
+    },
+    "include": ["src"]
+  }
