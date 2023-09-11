@@ -1,7 +1,4 @@
-const backgroundPageConnection = chrome.runtime.connect({
-  name: 'panel'
-});
-
+const backgroundPageConnection = chrome.runtime.connect(chrome.runtime.id, {name: 'panel'});
 
 backgroundPageConnection.postMessage({
   name: 'init',
@@ -17,4 +14,4 @@ backgroundPageConnection.onMessage.addListener((msg) => {
   console.log(msg)
 });
 
-module.exports = {};
+module.exports = { port: backgroundPageConnection };

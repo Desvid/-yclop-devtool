@@ -9,6 +9,7 @@ const FIRST_SUBSCRIPTION_ACTION = 'didGetFirstSubscriptions';
  * Snow White -> content-script.js -> **background.js** -> dev tools
  */
 chrome.runtime.onMessage.addListener((event, sender) => {
+  console.log(event)
     if (event.name === '888') {
       
       dataMap[event.order] = event;

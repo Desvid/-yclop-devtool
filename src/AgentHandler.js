@@ -1,11 +1,11 @@
-import port from './port';
+import { port } from './port';
 import { NEW_SUBSCRIPTION, FIRST_SUBSCRIPTIONS } from './mocks';
 
 class AgentHandler {
 
   constructor(flux) {
     this.flux = flux;
-
+  
     this.handlers = {
       connected: () => this.flux.actions.didConnect(),
   
@@ -20,7 +20,9 @@ class AgentHandler {
         this.flux.actions.newSubscriptions.didGetNewSubscription(NEW_SUBSCRIPTION);
       }, 3000);
     } else {
+      
       port.onMessage.addListener((message) => {
+        console.log(message)
         this.handleMessage(message); 
       });
     }

@@ -29,9 +29,14 @@ module.exports = {
         }
       },
       {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
+        test: /\.ts$/,
         exclude: /node_modules/,
+        use: 'ts-loader'
+      },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: 'ts-loader'
       },
       {
         test: /\.less$/,
